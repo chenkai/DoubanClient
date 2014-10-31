@@ -191,20 +191,21 @@ static double firstCus = 10, secondCus = 20;
     
     //因为代码块blockLocalArgument 通过typedef 跟firstCus & secondCus 都是全局
     //代码块可以访问与它相同的有效范围的声明的变量
-    
+
+ 
 }
 
 
-//Block Use Function and Define
-
-- (void)blockDefineAndCall
+- (void) validateCodeBlockSomeTip
 {
+    //typedef double(^testArguments) (double object1,double object2) ;
     
-    //control the define group demo
-    //
+    //int (^multiply_block)(int number) = ^(int number) { return (value * number);};
+ 
+    double (^regiondddDefine)(double d) = ^(double d) { return 23.00;};
+    double (^justTestArgumentName)(double argument1) =^(double a) {return a;};//can be different
     
 }
-
 
 
 
