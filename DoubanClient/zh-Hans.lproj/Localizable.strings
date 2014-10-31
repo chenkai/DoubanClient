@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  DoubanClient
+
+  Created by chenkai on 14/10/29.
+  Copyright (c) 2014年 kai.chen. All rights reserved.
+*/
+
+"DoubanClient" = "豆瓣客户端";
+"Start_Oauth_Validate" ="开启Oauth认证";
+"CustomerName" = "客户名称";
