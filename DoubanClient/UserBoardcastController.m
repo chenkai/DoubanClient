@@ -204,6 +204,9 @@ static double firstCus = 10, secondCus = 20;
  
     double (^regiondddDefine)(double d) = ^(double d) { return 23.00;};
     double (^justTestArgumentName)(double argument1) =^(double a) {return a;};//can be different
+
+    //define group username and code name for this
+    double *firstNumber =45;
     
 }
 
