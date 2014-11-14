@@ -35,6 +35,11 @@
     
 }
 
+
+
+
+
+
 //define point to function with c style
 void (*megerCustomerName)(void);
 
@@ -127,8 +132,10 @@ int (^getCustomerInfoById)(int customerId) = ^(int customerId)
     
     //全局变量 语句块
     [self callCodeBlockDomainArgument];
+    
+    
+    
 }
-
 
 - (void) callCodeBlockAsArgument
 {
@@ -209,6 +216,16 @@ static double firstCus = 10, secondCus = 20;
     double *firstNumber =45;
     
 }
+
+- (void) DefineGroupSomeDemo
+{
+   //create some method with argument code block  and define some code for this document
+    NSString *changePassword= @"define group some code ";
+    
+    //call code block and define new type 
+}
+
+
 
 
 

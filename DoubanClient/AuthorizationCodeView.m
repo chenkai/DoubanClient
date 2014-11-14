@@ -14,7 +14,9 @@
 
 @implementation AuthorizationCodeView
 
-- (instancetype)initWithFrame:(CGRect)frame{
+@synthesize systemControlBut;
+
+- (instancetype)initWithFrame:(CGRect)frame {
     self= [super initWithFrame:frame];
     if (self) {
         
@@ -23,6 +25,7 @@
         [self.localizableController initUserLanguage];
         
         [self initUserLoginButton:frame];
+        [self initSystemControlButton];
         [self actionWithInter];
     }
     return self;
@@ -30,15 +33,16 @@
 
 - (void) initUserLoginButton:(CGRect)frame {
     
-    self.userLoginButton= [[UIButton alloc] initWithFrame:CGRectMake(80, 250, 200, 45)];
-    self.userLoginButton.backgroundColor =[UIColor grayColor];
+    self.userLoginButton= [[UIButton alloc] initWithFrame:CGRectMake(50, 80, 280, 45)];
+    self.userLoginButton.backgroundColor =[UIColor darkGrayColor];
 
     NSString *oauthTitle= [self.localizableController.currentBundle localizedStringForKey:@"Start_Oauth_Validate" value:nil table:@"Localizable"];
     [self.userLoginButton setTitle:oauthTitle forState:UIControlStateNormal];
+  
     [self addSubview: self.userLoginButton];
 }
 
-- (void) actionWithInter{
+- (void) actionWithInter {
     //LocalizableController *localizableController = [[LocalizableController alloc] init];
     //[localizableController initUserLanguage];
     
@@ -55,6 +59,15 @@
     NSLog(traditionalName);
 
  }
+
+- (void) initSystemControlButton {
+    systemControlBut = [[UIButton alloc] initWithFrame:CGRectMake(50, 30, 280, 45)];
+    systemControlBut.backgroundColor = [UIColor darkGrayColor];
+    
+    [systemControlBut setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [systemControlBut setTitle:@"System Controls" forState: UIControlStateNormal];
+    [self addSubview: systemControlBut];
+}
 
 @end
 

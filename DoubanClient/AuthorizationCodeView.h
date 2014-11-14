@@ -14,5 +14,6 @@
 
 @property (atomic,readwrite) UIButton *userLoginButton;
 @property (atomic,readwrite) LocalizableController *localizableController;
+@property (atomic,readwrite) UIButton *systemControlBut;
 
 @end

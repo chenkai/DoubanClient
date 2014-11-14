@@ -9,4 +9,7 @@
 #import <UIKit/UIKit.h>
 @interface UserBoardcastController : UIViewController
 
+typedef double (^functionCanCallBlockWithArgument) (double object1,double object2);
+
+
 @end

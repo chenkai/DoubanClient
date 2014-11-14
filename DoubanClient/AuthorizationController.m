@@ -12,6 +12,7 @@
 #import "OauthCodeController.h"
 #import "OauthCodeView.h"
 #import "UserBoardcastController.h"
+#import "SystemControlViewController.h"
 
 @implementation AuthorizationController
 
@@ -29,24 +30,26 @@
     AuthorizationCodeView *uiView=[[AuthorizationCodeView alloc] init];
     uiView.alpha=0.5;
     uiView.backgroundColor=[UIColor whiteColor];
+    
     [uiView.userLoginButton addTarget: self action:@selector(getOauthCode)  forControlEvents:UIControlEventTouchDown];
+    [uiView.systemControlBut addTarget:self action:@selector(navigateToSystemControlView) forControlEvents: UIControlEventTouchDown];
+    
     self.view=uiView;
     
 }
 
 - (void) viewDidLoad {
     [super viewDidLoad];
-
 }
 
 - (void)getOauthCode {
-    
-    //OauthCodeController *codeController =[[OauthCodeController alloc] init];
-    //[self.navigationController pushViewController: codeController animated:true];
-
-    //transfer to localizable view
     UserBoardcastController *boardcastController = [[UserBoardcastController alloc] init];
     [self.navigationController pushViewController: boardcastController animated:true];
+}
+
+- (void)navigateToSystemControlView{
+    SystemControlViewController *systemViewController= [[SystemControlViewController alloc] init];
+    [self.navigationController pushViewController: systemViewController animated:true];
 }
 
 @end

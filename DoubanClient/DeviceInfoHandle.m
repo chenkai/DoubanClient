@@ -17,7 +17,7 @@
       //device name
     NSString *deviceName=[[UIDevice currentDevice] name];
     NSString *systemNane = [[UIDevice currentDevice] systemName];
-    NSString *systemVersion = [[UIDevice currentDevice] systemVersion ];
+    //NSString *systemVersion = [[UIDevice currentDevice] systemVersion ];
     
     NSLog(@"current DEvice Name:%@",deviceName);
 }
